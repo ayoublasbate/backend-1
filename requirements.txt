@@ -3,3 +3,4 @@ mysql-connector
 flask-mysqldb
 flask-cors
 flask-bcrypt
+flask_jwt_extended
