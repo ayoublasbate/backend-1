@@ -8,6 +8,7 @@ from flask_jwt_extended import (create_access_token)
 
 app = Flask(__name__)
 
+app.config['MYSQL_HOST'] = 'mysql.test.svc'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'root'
 app.config['MYSQL_DB'] = 'test'
