@@ -68,4 +68,8 @@ def login():
     return result
 	
 if __name__ == '__main__':
+    #Init DB :
+    cur = mysql.connection.cursor()
+    cur.execute("CREATE TABLE IF NOT EXISTS users(id INT AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(255) NOT NULL, last_name VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, created TIMESTAMP DEFAULT CURRENT_TIMESTAMP) ENGINE=INNODB")
+    print("Database Created Successfuly!")
     app.run(host='0.0.0.0', port=8080)
